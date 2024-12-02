@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Products</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>View Products</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/register">Register Product</a>
+        <a href="/products">View Products</a>
+        <a href="/transactions">View Transactions</a>
+        <a href="/reports">Reports</a>
+    </nav>
+
+    <main>
+        <h2>Product List</h2>
+        {% if products %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                        <tr>
+                            <td>{{ product.id }}</td>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.price }}</td>
+                            <td>{{ product.stock }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No products available.</p>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Inventory Management System</p>
+    </footer>
+</body>
+</html>

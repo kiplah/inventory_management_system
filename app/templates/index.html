@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/register">Register Product</a>
+        <a href="/products">View Products</a>
+        <a href="/transactions">View Transactions</a>
+        <a href="/reports">Reports</a>
+    </nav>
+
+    <div class="home-container">
+        <div class="welcome-text">
+            <h2>Welcome to the Inventory Management System</h2>
+            <p>Our Inventory Management System allows businesses to efficiently track and manage their products, sales, and transactions. Whether you're a small business owner or part of a larger enterprise, this system helps ensure your inventory is organized and up-to-date. Use the navigation bar to easily manage your product listings, view transactions, and generate detailed reports for better decision-making.</p>
+            <a href="/register" class="btn">Start Managing Products</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Inventory Management System | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
